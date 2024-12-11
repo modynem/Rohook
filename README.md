@@ -25,21 +25,31 @@ A lightweight Lua library for easy Discord webhook integration, supporting messa
 
 ### Sending a Simple Message
 ```lua
-local webhook = require('lua-discord-webhook')
+local Webhook = require(game:GetService("ReplicatedStorage").Webhook)
+local webhookUrl = "DISCORD_WEBHOOK_URL"
 
-local url = "https://discord.com/api/webhooks/your_webhook_url"
-webhook.sendMessage(url, "Hello, Discord!")
+Webhook:SendMessage(webhookUrl, "hi there it's me ahmed!")
 ```
 
 ### Sending an Embed
 ```lua
-local embed = {
-    title = "Lua Discord Webhook",
-    description = "An awesome Lua library for Discord webhooks!",
-    color = 0x7289DA  -- Discord's blurple color
-}
+local embed = Webhook.CreateEmbedBuilder()
+		:SetTitle("Test")
+		:SetDescription("hello everybody!")
+		:SetColor(Color3.fromRGB(114, 137, 218))
+		:SetTimestamp(DateTime.now())
+		:AddField("Credit", "@ahmedsayed0", true)
+		:Build()
 
-webhook.sendEmbed(url, embed)
+	Webhook:SendMessage(webhookUrl, {
+		username = "Ahmed Sayed",
+		avatar_url = "https://i.postimg.cc/5Nkf0Zng/7-C51-A09-F-212-B-4751-BC5-C-943-C26-AFEC48.jpg",
+		embeds = {embed}
+	}, function(response)
+		if not response.Success then
+			warn("Failed to send monitoring update:", response.Message)
+		end
+	end)
 ```
 
 ## Contributing
