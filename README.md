@@ -14,7 +14,7 @@ A lightweight Lua library for easy Discord webhook integration, supporting messa
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/lua-discord-webhook.git
+   git clone https://github.com/modynem/Webhook-Library.git
    ```
 2. Include the library in your Lua project:
    ```lua
@@ -25,7 +25,7 @@ A lightweight Lua library for easy Discord webhook integration, supporting messa
 
 ### Sending a Simple Message
 ```lua
-local Webhook = require(game:GetService("ReplicatedStorage").Webhook)
+local Webhook = require(path.to.module)
 local webhookUrl = "DISCORD_WEBHOOK_URL"
 
 Webhook:SendMessage(webhookUrl, "hi there it's me ahmed!")
