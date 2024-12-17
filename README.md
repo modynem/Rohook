@@ -47,7 +47,7 @@ local embed = Webhook.CreateEmbedBuilder()
 		embeds = {embed}
 	}, function(response)
 		if not response.Success then
-			warn("Failed to send monitoring update:", response.Message)
+			warn("Failed to send embed:", response.Message)
 		end
 	end)
 ```
