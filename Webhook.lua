@@ -476,7 +476,7 @@ end
 
 -- Initialize the service
 local function Init()
-	Logger:Log("INFO", "Made by @ahmedsayed0, Porfolio: https://ahmedsayed.vercel.app/")
+	Logger:Log("INFO", "Made by @ahmedsayed0, Porfolio: https://ahmedsayedv2.vercel.app/")
 	Logger:Log("INFO", "WebhookService initialized")
 end
 
