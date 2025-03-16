@@ -87,7 +87,7 @@ For detailed usage instructions on these features, refer to the library's source
 
 | Version | Release Date | Changes |
 |---------|--------------|---------|
-| 1.0     | [Initial Release Date] | Initial release with basic webhook support, simple messages, and embed functionality. |
+| 1.0     | Jun 2, 2025 | Initial release with basic webhook support, simple messages, and embed functionality. |
 | 2.0     | March 16, 2025 | Renamed to "Rohook". Added message editing/deletion, scheduling, templates, priority queuing, rate limiting, and improved EmbedBuilder. Updated API for instance-based usage. |
 
 *(Update the initial release date for v1.0 as needed.)*
